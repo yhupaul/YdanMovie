@@ -1,44 +1,41 @@
 import { useState, useEffect } from "react";
+import Movie from "./Movie";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [coins, setCoins] = useState([]);
-  const [money, setMoney] = useState([]);
-  
-  useEffect(() => {
-    fetch("https://api.coinpaprika.com/v1/tickers")
-    .then((response) => response.json())
-    .then((json) => {
-      setCoins(json);
-      setLoading(false);
-    });
-  }, []);
+  const [movies, setMovies] = useState([]);
+// this below code is the same function as useEffect fetch function
+  const getMovies = async () => {
+    const json = await (
+      await fetch(
+        `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year`
+      )
+    ).json();
+    setMovies(json.data.movies);
+    setLoading(false);
+  };
 
-  function onChange(event) {
-    setMoney(event.target.value)
-  }
+  useEffect(() => {
+    getMovies();
+  }, []);
 
   return (
     <div>
-      <h1>The Coins! {loading ? "" : `(${coins.length})`}</h1>
-      <input
-          onChange={onChange}
-          value={money}
-          type="number"
-          placeholder="Your amout of USD"
-      />
       {loading ? (
-        <strong>Loadding...</strong>
-      ) : (
-        <select>
-          {coins.map((coin) => (
-            <option>
-              {coin.name} ({coin.symbol}): ${coin.quotes.USD.price} USD 
-              You can buy {money / coin.quotes.USD.price} {coin.symbol}
-            </option>
-          ))}
-        </select>
-      )}
+        <h1>Loading...</h1>
+        ) : (
+          <div>
+            {movies.map((movie) => (
+              <Movie
+                key={movie.id} 
+                coverImg={movie.medium_cover_image} 
+                title={movie.title} 
+                summary={movie.summary}
+                genres={movie.genres}
+              />
+            ))}
+          </div>
+        )}
     </div>
   );
 }

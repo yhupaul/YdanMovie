@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import DetailMovie from "../components/DetailMovie";
 
 function Detail() {
@@ -24,6 +24,9 @@ function Detail() {
         <h1>Loading...</h1>
         ) : (
           <div>
+             <div>
+            <Link to="/">Home</Link>
+            </div>
               <DetailMovie 
                 backgroundImage={
                   movie.data.movie.background_image_original

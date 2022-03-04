@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import DetailMovie from "../components/DetailMovie";
 
@@ -25,10 +25,10 @@ function Detail() {
         ) : (
           <div>
               <DetailMovie 
-                background_cover_image={
+                backgroundImage={
                   movie.data.movie.background_image_original
                 }
-                medium_cover_image={movie.data.movie.medium_cover_image}
+                coverImg={movie.data.movie.medium_cover_image}
                 title={movie.data.movie.title}
                 rating={movie.data.movie.rating}
                 genres={movie.data.movie.genres}

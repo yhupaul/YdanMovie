@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 
 function DetailMovie({ coverImg, title, summary, genres, backgroundImage, rating, year, runtime, description_full }) {

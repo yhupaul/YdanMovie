@@ -25,9 +25,6 @@ function Detail() {
         <h1>Loading...</h1>
         ) : (
           <div>
-             <div>
-            <Link to="/">Home</Link>
-            </div>
               <DetailMovie 
                 backgroundImage={
                   movie.data.movie.background_image_original

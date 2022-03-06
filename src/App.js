@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState}   from "react"
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,13 +7,18 @@ import {
 import Header from "./components/Header";
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
+import Genre from "./routes/Genre";
 
 function App() {
-  return(
+  const [genres, setGenres] = useState(['animation', 'sci-fi', 'romance']);
+
+  return (
   <div>
-    <Router>
+    <Router>  
     <Header />  
-      <Routes>
+    <Routes>     
+        <Route path="/movie/:genre" element={<Genre />}>
+        </Route>   
         <Route path="/movie/:id" element={<Detail />}> 
         </Route>
         <Route path="/" element={<Home />}>

@@ -59,7 +59,7 @@ function Header() {
       <h1 className='logo'>
         <Link to='/'>YDanMovies</Link>
       </h1>
-      <Nav>
+      {/* <Nav>
         <ul>
           <li>
             <Link to='/movie/animation'>Animation</Link>
@@ -71,7 +71,7 @@ function Header() {
             <Link to='/movie/romance'>Romance</Link>
           </li>
         </ul>
-      </Nav>
+      </Nav> */}
     </Header>
   );
 }

@@ -7,7 +7,7 @@ import {
 import Header from "./components/Header";
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
-import Genre from "./routes/Genre";
+
 
 function App() {
   const [genres, setGenres] = useState(['animation', 'sci-fi', 'romance']);
@@ -17,8 +17,7 @@ function App() {
     <Router>  
     <Header />  
     <Routes>     
-        <Route path="/movie/:genre" element={<Genre />}>
-        </Route>   
+      
         <Route path="/movie/:id" element={<Detail />}> 
         </Route>
         <Route path="/" element={<Home />}>

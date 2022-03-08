@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react"
-
+import styled from "styled-components"
+import styles from "./Header.css"
 
 function Header() {
   const Group_obj = { "High Rating": "minimum_rating=8", "Romance": "genre=romance", "Music": "genre=music", "Animation": "genre=animation" };
@@ -19,28 +20,28 @@ const [search, setSearch] = useState(null);
 
     return (
         // It's the Navigation Bar, always above the container!!
-        <div>
+        <header>
             {/*  Page Name */}
-            <div>
+            <h1>
                 <Link to={"/react-for-beginners"} >YdFLEX</Link>
-            </div>
-
+            </h1>
+            
             {/* Group Links */}
-            <div>
+            <nav>
                 {
                     Group_key_arr.map((key) => {
                         return (
-                            <div>
-                                <div>
+                            <div className='genre'>
+                                <h3>
                                     <Link
                                         to={`/page/${Group_obj[key]}/1`}
                                     >{key}</Link>
-                                </div>
+                                </h3>
                             </div>
                         )
                     })
                 }
-            </div>
+            </nav>
              {/* Search Bar */}
             <div>
                 <div>
@@ -64,7 +65,7 @@ const [search, setSearch] = useState(null);
                 </div>
             </div>   
            
-        </div>
+        </header>
     )
   // style
 //   const Header = styled.header`

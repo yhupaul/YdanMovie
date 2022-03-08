@@ -1,18 +1,21 @@
 import React from 'react';
 // import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { useState } from "react"
+
 
 function Header() {
   const Group_obj = { "High Rating": "minimum_rating=8", "Romance": "genre=romance", "Music": "genre=music", "Animation": "genre=animation" };
 const Group_key_arr = Object.keys(Group_obj);
 
-// const [search, setSearch] = useState(null);
+const [search, setSearch] = useState(null);
 
-    // Event when u touch the Search Bar!
-    // const searchClick = (event) => {
-    //     setSearch(event.target.value)
-    // }
+    //Event when u touch the Search Bar!
+    const searchClick = (event) => {
+        setSearch(event.target.value)
+    }
 
     return (
         // It's the Navigation Bar, always above the container!!
@@ -37,10 +40,29 @@ const Group_key_arr = Object.keys(Group_obj);
                         )
                     })
                 }
-                {/* 🎄 Merry Christmas!
-                <div className={styles.MerryChristMas}><Link to={`/search/christmas`}>Christmas🎄</Link></div> */}
             </div>
-
+             {/* Search Bar */}
+            <div>
+                <div>
+                    <form>
+                        {/* Search Text */}
+                        <input
+                            type="text"
+                            placeholder="Search Movie!"
+                            value={search}
+                            onChange={searchClick}
+                            onMouseOut={() => { setSearch("") }}
+                        >
+                        </input>
+                        {/* Search Button */}
+                        <Link to={`/search/${search}`}>
+                            <button>
+                                <FontAwesomeIcon icon={faSearch} size="lg" />
+                            </button>
+                        </Link>
+                    </form>
+                </div>
+            </div>   
            
         </div>
     )

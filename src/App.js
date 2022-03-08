@@ -4,23 +4,24 @@ import {
   Routes,
   Route,
 } from "react-router-dom"
+
 import Header from "./components/Header";
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
-
+import Group from "./routes/Group";
 
 function App() {
-  const [genres, setGenres] = useState(['animation', 'sci-fi', 'romance']);
 
   return (
   <div>
     <Router>  
     <Header />  
-    <Routes>     
-      
+    <Routes> 
+        <Route path={`/page/:group/:page`} element={<Group />}>
+        </Route>        
         <Route path="/movie/:id" element={<Detail />}> 
         </Route>
-        <Route path="/" element={<Home />}>
+        <Route path="/react-for-beginners" element={<Home />}>
         </Route>
       </Routes>
     </Router>

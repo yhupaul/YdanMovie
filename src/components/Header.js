@@ -44,8 +44,8 @@ const [search, setSearch] = useState(null);
             </nav>
              {/* Search Bar */}
             <div>
-                <div>
-                    <form>
+                <div class="search">
+                    <form class="form-wrapper">
                         {/* Search Text */}
                         <input
                             type="text"
@@ -57,9 +57,10 @@ const [search, setSearch] = useState(null);
                         </input>
                         {/* Search Button */}
                         <Link to={`/search/${search}`}>
-                            <button>
+                            <input type="submit" value="go" id="submit"></input>
+                            {/* <button>
                                 <FontAwesomeIcon icon={faSearch} size="lg" />
-                            </button>
+                            </button> */}
                         </Link>
                     </form>
                 </div>

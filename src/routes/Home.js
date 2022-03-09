@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Movie from "../components/Movie";
+import styles from "./Home.css";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -21,11 +22,11 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <body>
       {loading ? (
         <h1>Loading...</h1>
         ) : (
-          <div>
+          <div class="movieGrid">
             {movies.map((movie) => (
               <Movie
                 key={movie.id} 
@@ -38,7 +39,7 @@ function Home() {
             ))}
           </div>
         )}
-    </div>
+    </body>
   );
 }
 

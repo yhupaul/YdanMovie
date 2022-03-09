@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import SearchMovie from "../components/SearchMovie";
-
+import styles from "./Home.css";
 
 function Search() {
   const { search } = useParams();
@@ -62,11 +62,11 @@ function Search() {
 
 
   return (
-    <div>
+    <body>
       {loading ? (
         <h1>Loading..</h1>
       ) : (
-          <div>
+          <div class="movieGrid">
             {
               movArr.map((movie) => (
                 <SearchMovie
@@ -84,7 +84,7 @@ function Search() {
             }
           </div>
       )}
-    </div>
+    </body>
   )
 }
 

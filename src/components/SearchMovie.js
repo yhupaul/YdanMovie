@@ -1,21 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import styles from "./Movie.css";
 
 function SearchMovie({ id, coverImg, title, rating, runtime, year, summary, santa}) {
 
   return (
     <div>
-
       {/* ShortView (Img, Title, rating, runtime...) */}
-      <div>
-        <div>
-          <div>
-          </div>
-          <div>
+          <div class="movieContainer">
             <div>
               <div>
-              <img src={coverImg} alt={title} />
+              <img class="coverImage" src={coverImg} alt={title} />
                 <h3 >
                   <Link to={`/movie/${id}`}>
                     {(title.length > 35)
@@ -31,8 +27,6 @@ function SearchMovie({ id, coverImg, title, rating, runtime, year, summary, sant
             <p>{summary ? (summary.length > 180 ? `${summary.slice(0, 180)}...` : summary) : null}</p>
           </div>
         </div>
-      </div>
-    </div>
   )
 }
 

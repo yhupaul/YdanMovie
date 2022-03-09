@@ -1,8 +1,8 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-// import styles from "./MovieGroup.module.css";
+import { Link } from "react-router-dom"; 
+import styles from "./MovieGruop.css"
 // import default_Img from "./Img/default_Img.jpeg";
 
 // const onErrorImg = (e) => {
@@ -11,13 +11,13 @@ import { Link } from "react-router-dom";
 
 function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {
   return (
-    <div>
+    <div class="movieContainer">
 
       {/* ShortView (Img, Title, rating, runtime...) */}
 
             <div>
               <div>
-              <img src={coverImg} alt={title} />
+              <img class="coverImage" src={coverImg} alt={title} />
                 <h3>
                   <Link to={`/movie/${id}`}>
                     {(title.length > 35)

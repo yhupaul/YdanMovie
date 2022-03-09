@@ -57,10 +57,9 @@ const [search, setSearch] = useState(null);
                         </input>
                         {/* Search Button */}
                         <Link to={`/search/${search}`}>
-                            <input type="submit" value="go" id="submit"></input>
-                            {/* <button>
+                            <button>
                                 <FontAwesomeIcon icon={faSearch} size="lg" />
-                            </button> */}
+                            </button>
                         </Link>
                     </form>
                 </div>

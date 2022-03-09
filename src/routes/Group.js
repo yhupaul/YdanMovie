@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import MovieGroup from "../components/MovieGruop";
 import { Link } from "react-router-dom"
-// import styles from "./Group.module.css";
+import styles from "./Group.css";
 // import Load from '../component/Load';
 
 const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -31,11 +31,11 @@ function Group() {
   }, [group, page])
 
   return (
-    <div>
+    <body>
       {loading ? (
         <h1>Loading..</h1>
       ) : (
-          <div>
+          <div class="movieGrid">
             {movies.map((movie) => (
               <MovieGroup
                 key={movie.id}
@@ -68,7 +68,7 @@ function Group() {
             </div>
           </div>
       )}
-    </div>
+    </body>
   )
 }
 

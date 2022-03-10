@@ -4,6 +4,16 @@ I buil a React application that allows users get movies' information. User can s
 
 ## Screenshots
 
+Home
+!["Homepage"](https://github.com/yhupaul/YdanMovie/blob/main/doc/Homepage.png)
+Genres
+!["Genres"](https://github.com/yhupaul/YdanMovie/blob/main/doc/Genres.png)
+Search
+!["Search"](https://github.com/yhupaul/YdanMovie/blob/main/doc/Search.png)
+MovieDetail
+!["MovieDetail"](https://github.com/yhupaul/YdanMovie/blob/main/doc/MovieDetail.png)
+Movie site
+!["Movie site"](https://github.com/yhupaul/YdanMovie/blob/main/doc/Movie%20site.png)
 
 
 ### Set up

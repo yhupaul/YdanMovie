@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# YdanMovie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I buil a React application that allows users get movies' information. User can search the movie or choose by genres.
 
-## Available Scripts
+## Screenshots
 
 In the project directory, you can run:
 

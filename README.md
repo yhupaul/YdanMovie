@@ -1,6 +1,7 @@
 # YdanMovie
 
 I buil a React application that allows users get movies' information. User can search the movie or choose by genres.
+User also can watch the movie by click the movie's name on MovieDetail page.
 
 ## Screenshots
 

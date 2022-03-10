@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import DetailMovie from "../components/DetailMovie";
 
+
 function Detail() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);

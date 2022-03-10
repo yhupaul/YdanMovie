@@ -1,0 +1,47 @@
+.title {
+  font-family: cursive;
+  color: white;
+  font-size: 28px;
+}
+
+.bannerContainer {
+  display: flex;
+  gap: 8px;
+  padding-top: 20px;
+}
+
+.banner {
+  margin-top: 1%;
+  margin-left: 1%;
+  width: 400px;
+  height: 400px;
+  z-index: -1;
+}
+
+body {
+  margin: 0;
+  background-color: #181818;
+  color: white;
+}
+
+/* .title > a {
+  text-decoration: none;
+} */
+.title:hover {
+  color: red;
+}
+ul {
+  margin-top: 16px;
+}
+
+.backgroundImage {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+article {
+  display: block;
+  margin-right: 20px;
+}

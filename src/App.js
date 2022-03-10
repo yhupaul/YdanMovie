@@ -24,7 +24,7 @@ function App() {
         </Route>        
         <Route path="/movie/:id" element={<Detail />}> 
         </Route>
-        <Route path="/react-for-beginners" element={<Home />}>
+        <Route path="/" element={<Home />}>
         </Route>
       </Routes>
     </Router>

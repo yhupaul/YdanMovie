@@ -1,5 +1,5 @@
 .title {
-  font-family: cursive;
+  /* font-family: cursive; */
   color: white;
   font-size: 28px;
 }
@@ -8,6 +8,7 @@
   display: flex;
   gap: 8px;
   padding-top: 20px;
+  padding-left: 20px;
 }
 
 .banner {
@@ -24,12 +25,16 @@ body {
   color: white;
 }
 
-/* .title > a {
+.title > a {
   text-decoration: none;
-} */
-.title:hover {
-  color: red;
 }
+
+
+
+a:hover {
+  color: beige;
+}
+
 ul {
   margin-top: 16px;
 }

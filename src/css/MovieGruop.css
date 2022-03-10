@@ -4,6 +4,7 @@
   transition: all 0.4s ease;
   background-color: antiquewhite;
   padding: 10px;
+  color: black;
 }
 
 .movieContainer:hover {
@@ -42,7 +43,7 @@
   justify-content: column;
 }
 
-.descroption {
+.description {
   padding: auto;
   margin-left: 10px;
 }

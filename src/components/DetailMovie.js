@@ -1,16 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./DetailMovie.css";
+import styles from "../css/DetailMovie.css";
+import Movie from "./Movie";
 
-function DetailMovie({ coverImg, title, genres, backgroundImage, rating, year, runtime, description_full }) {
+function DetailMovie({ coverImg, title, genres, backgroundImage, rating, year, runtime, description_full, url }) {
   return (
     <div>
       <img class="backgroundImage" src={backgroundImage} alt={title} />
       <div class="bannerContainer">
       <img clas="banner"src={coverImg} alt={title} />
       <div>
-        <h2 class="title">Title: {title}</h2>
-        <h3>Rating: {rating} Year: {year}</h3>
+        <h1 class="title"><a href={url}>Title: {title}</a>{" "}</h1>
+        <h3>Rating: {rating}</h3>
+        <h3>Year: {year}</h3>
         <h3>Running Time: {runtime}mins</h3>
         <ul>
           {genres.map((g) => (

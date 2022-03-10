@@ -37,6 +37,7 @@ function Detail() {
                 year={movie.data.movie.year}
                 runtime={movie.data.movie.runtime}
                 description_full={movie.data.movie.description_full}
+                url={movie.data.movie.url}
               />
           </div>
         )}

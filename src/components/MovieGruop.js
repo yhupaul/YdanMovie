@@ -2,7 +2,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom"; 
-import styles from "./MovieGruop.css"
+import styles from "../css/MovieGruop.css"
 // import default_Img from "./Img/default_Img.jpeg";
 
 // const onErrorImg = (e) => {
@@ -12,9 +12,7 @@ import styles from "./MovieGruop.css"
 function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {
   return (
     <div class="movieContainer">
-
       {/* ShortView (Img, Title, rating, runtime...) */}
-
             <div>
               <div>
               <img class="coverImage" src={coverImg} alt={title} />
@@ -32,7 +30,6 @@ function MovieGroup({ id, coverImg, title, rating, runtime, year, summary }) {
             <p>{runtime ? `runtime: ${runtime} (min)` : null}</p>
             <p>{summary ? (summary.length > 180 ? `${summary.slice(0, 180)}...` : summary) : null}</p>
           </div>
-
   )
 }
 
@@ -42,7 +39,6 @@ MovieGroup.prototypes = {
   title: PropTypes.string.isRequired,
   rating: PropTypes.number,
   runtime: PropTypes.number,
-  // download_count: PropTypes.number,
   summary: PropTypes.string
 }
 

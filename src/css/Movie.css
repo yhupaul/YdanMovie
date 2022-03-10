@@ -4,7 +4,6 @@
   transition: all 0.4s ease;
   background-color: antiquewhite;
   padding: 10px;
-  
 }
 
 .movieContainer:hover {
@@ -37,13 +36,14 @@
   transition: all 0.4s ease;
 }
 .genres {
-  border-bottom: 2px solid white;
+  border: transparent;
   display: flex;
   gap: 20px;
   justify-content: column;
+  text-decoration:none
 }
 
-.descroption {
+.description {
   padding: auto;
   margin-left: 10px;
 }

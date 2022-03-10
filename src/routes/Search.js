@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import SearchMovie from "../components/SearchMovie";
-import styles from "./Home.css";
+import styles from "../css/Home.css";
 
 function Search() {
   const { search } = useParams();

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import styles from "./Movie.css";
+import styles from "../css/Movie.css";
 
 function SearchMovie({ id, coverImg, title, rating, runtime, year, summary, santa}) {
 

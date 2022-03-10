@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import MovieGroup from "../components/MovieGruop";
 import { Link } from "react-router-dom"
-import styles from "./Group.css";
+import styles from "../css/Home.css";
 // import Load from '../component/Load';
 
 const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

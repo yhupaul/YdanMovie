@@ -1,3 +1,8 @@
+
+---
+permalink: /index.html
+---
+
 # YdanMovie
 
 I built a React application that allows users get movies' information. User can search the movie or choose by genres.

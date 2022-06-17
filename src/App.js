@@ -1,6 +1,7 @@
-import React, {useState}   from "react"
+import React from "react"
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom"
@@ -15,7 +16,7 @@ function App() {
 
   return (
   <div>
-    <Router>  
+    <HashRouter basename={process.env.PUBLIC_URL}>  
     <Header />  
     <Routes>
         <Route path={`/search/:search`} element={<Search />}>
@@ -27,7 +28,7 @@ function App() {
         <Route path="/YdanMovie" element={<Home />}>
         </Route>
       </Routes>
-    </Router>
+    </HashRouter>
   </div>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react"
 import {
-  // BrowserRouter as Router,
-  HashRouter,
+  BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom"
@@ -16,19 +15,23 @@ function App() {
 
   return (
   <div>
-    <HashRouter basename={process.env.PUBLIC_URL}>  
+    <Router>  
     <Header />  
     <Routes>
-        <Route path={`/search/:search`} element={<Search />}>
+    <Route path='/YdanMovie' exact component={Search}/>
+    <Route path='/YdanMovie' exact component={Group}/>
+    <Route path='/YdanMovie' exact component={Detail}/>
+    <Route path='/YdanMovie' exact component={Home}/>
+        {/* <Route path={`/search/:search`} element={<Search />}>
         </Route>
         <Route path={`/page/:group/:page`} element={<Group />}>
         </Route>        
         <Route path="/movie/:id" element={<Detail />}> 
         </Route>
         <Route path="/YdanMovie" element={<Home />}>
-        </Route>
+        </Route> */}
       </Routes>
-    </HashRouter>
+    </Router>
   </div>
   );
 }
